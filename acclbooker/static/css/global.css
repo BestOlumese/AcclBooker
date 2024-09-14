@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Russo+One&family=Sora:wght@100..800&family=Young+Serif&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding doesn't affect the width/height */
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #f7f7f7;
+}
+
+navbar {
+    @apply flex justify-between items-center py-5 px-[150px] max-sm:px-[30px] max-md:px-[60px] max-lg:px-[100px] bg-white shadow-md w-full;
+}
+
+navbar h1.logo {
+    @apply font-extrabold text-3xl uppercase;
+}
+
+.container {
+    @apply w-full max-w-[100%] mx-auto px-[150px] max-sm:px-[30px] max-md:px-[60px] max-lg:px-[100px] my-10 flex max-lg:flex-col gap-12 items-start;
+}
+
+.sidebar {
+    @apply flex flex-col gap-[20px] w-full lg:w-[30%];
+}
+
+.link {
+    @apply text-[18px] font-medium text-gray-600 hover:text-gray-900 hover:underline;
+}
+
+.panel {
+    @apply bg-white flex flex-col gap-[12px] drop-shadow-md p-4 rounded-md;
+}
+
+.panel-title {
+    @apply text-2xl font-semibold;
+}
+
+.panel-link-group {
+    @apply flex flex-col gap-[4px];
+}
+
+.body {
+    @apply w-full lg:w-[70%] gap-6 grid md:grid-cols-2 xl:grid-cols-3;
+}
+
+.card {
+    @apply bg-white flex flex-col gap-2 drop-shadow-md p-4 max-md:p-6 rounded-md;
+}
+
+.card-title {
+    @apply text-xl font-medium;
+}

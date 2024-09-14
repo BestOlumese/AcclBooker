@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accl Booking App - {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <navbar>
+        <h1 class="logo">
+            <a href="/">ACCL</a>
+        </h1>
+        <div>
+            <a class="text-xl font-semibold" href="/admin/boards/board/add/" target="_blank">Book a Meeting</a>
+        </div>
+    </navbar>
+    <div class="container">
+        <div class="sidebar">
+            <div>
+                <a href="/" class="link">All Boards</a>
+            </div>
+            <div class="panel">
+                <h1 class="panel-title">Rooms</h1>
+                <div class="panel-link-group">
+                    {% block sidebar %}{% endblock %}
+                </div>
+            </div>
+            <div class="panel">
+                <h1 class="panel-title">Quick Links</h1>
+                <div class="panel-link-group">
+                    <a href="/today" class="link">Today Meetings</a>
+                    <a href="/completed" class="link">Completed Meetings</a>
+                    <a href="/uncompleted" class="link">Uncompleted Meetings</a>
+                </div>
+            </div>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
